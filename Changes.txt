@@ -1,0 +1,6 @@
+Revision history for Perl extension DFA.
+
+1.92  Mon Mar 29 10:15:59 1999
+	- original version; created by h2xs 1.18
+
+Use h2xs to generate the skeletons for Command.pm and Generate.pm.

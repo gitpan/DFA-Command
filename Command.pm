@@ -1,20 +1,26 @@
-package	DFA::Command;
+package DFA::Command;
 
 use integer;
 use strict;
 no strict 'refs';
 
-use vars qw(@EXPORT @EXPORT_OK @ISA);
-use vars qw($VERSION);
+use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
 
-use Exporter();
+require Exporter;
 
-@ISA		= qw(Exporter);
+@ISA = qw(Exporter);
+
+# Items to export into callers namespace by default. Note: do not export
+# names by default without a very good reason. Use EXPORT_OK instead.
+# Do not simply export all your public functions/methods/constants.
+
 @EXPORT		= qw(load new process);
+
 @EXPORT_OK	= qw(dump validate);
 
-$VERSION = '1.90';
+$VERSION	= '1.92';
 
+# Preloaded methods go here.
 #-------------------------------------------------------------------
 
 # Clean up the input line.
@@ -591,6 +597,8 @@ sub validate
 
 #-------------------------------------------------------------------
 
+# Autoload methods go after =cut, and are processed by the autosplit program.
+
 1;
 
 __END__
@@ -844,9 +852,6 @@ first space stops the dereference taking place. Outside double quotes the
 scanner correctly associates the $self token with the {'thing'} token.
 
 I regard this as a bug.
-
-=head1 REQUIRED MODULES
-
 
 =head1 AUTHOR
 

@@ -3,12 +3,8 @@ Generate.pm
 MANIFEST
 MANIFEST.SKIP
 Makefile.PL
-other/Test_2.log
-other/Test_2_Gen.pl
-other/Test_2_patched.pl
-other/Test_dn.log
-other/Test_dn.pl
-readme.txt
+Changes.txt
+Readme.txt
 tests/Chinese.dat
 tests/Chinese.log
 tests/Chinese.pl
@@ -34,3 +30,4 @@ tests/X500DNTest.pl
 tests/X500DN_Gen.pl
 tests/runTests.bat
 tests/runTests.tcsh
+t/base.t
