@@ -1,0 +1,167 @@
+Invalid DN: . 
+'c=' must appear in this DN. Expected format: 
+c=country
+	Error. 
+-----------------------------------------------------------------
+Invalid DN: c. 
+Each RDN must look like 'abc=xyz'. See: 'c'. Expected format: 
+c=country
+	Error. 
+-----------------------------------------------------------------
+Invalid DN: =. 
+Each RDN must look like 'abc=xyz'. See: '='. Expected format: 
+c=country
+	Error. 
+-----------------------------------------------------------------
+Invalid DN: c=. 
+Each RDN must look like 'abc=xyz'. See: 'c='. Expected format: 
+c=country
+	Error. 
+-----------------------------------------------------------------
+Invalid DN: c==. 
+Each RDN must look like 'abc=xyz'. See: 'c=='. Expected format: 
+c=country
+	Error. 
+-----------------------------------------------------------------
+Invalid DN: c==au. 
+'c==' is not allowed here. See: 'c==au'. Expected format: 
+c=country
+	Error. 
+-----------------------------------------------------------------
+Invalid DN: c=au=. 
+Each RDN must look like 'abc=xyz'. See: 'c=au='. Expected format: 
+c=country
+	Error. 
+-----------------------------------------------------------------
+DN: c=au;. 
+Generic DN: c=country. 
+Components of the RDN:
+c: au. 
+-----------------------------------------------------------------
+Invalid DN: c=au;o. 
+Each RDN must look like 'abc=xyz'. See: 'o'. Expected format: 
+c=country;o=organization
+	Error. 
+-----------------------------------------------------------------
+Invalid DN: c=au;o=. 
+Each RDN must look like 'abc=xyz'. See: 'o='. Expected format: 
+c=country;o=organization
+	Error. 
+-----------------------------------------------------------------
+DN: c=au;o=MagicWare;. 
+Generic DN: c=country;o=organization. 
+Components of the RDN:
+c: au. 
+o: MagicWare. 
+-----------------------------------------------------------------
+Invalid DN: c=au;l=Melbourne;o=MagicWare;ou=Research;c=Ron Savage. 
+'c=' is not allowed twice. See: 'c=au' and 'c=Ron Savage'. Expected format: 
+c=country;l=locality;o=organization;ou=organizationalUnit;cn=commonName
+	Error. 
+-----------------------------------------------------------------
+Locality: present. OrganizationalUnit: absent. 
+Invalid DN: c=au;l=Melbourne;o=MagicWare;cx=Ron Savage. 
+'cx=' is not allowed here. See: 'cx=Ron Savage'. Expected format: 
+c=country[;l=locality];o=organization[;ou=organizationalUnit];cn=commonName
+	Error. 
+-----------------------------------------------------------------
+Locality: present. OrganizationalUnit: present. 
+Invalid DN: c=au;l=Melbourne;o=MagicWare;ou=Research;cx=Ron Savage. 
+'cx=' is not allowed here. See: 'cx=Ron Savage'. Expected format: 
+c=country[;l=locality];o=organization[;ou=organizationalUnit];cn=commonName
+	Error. 
+-----------------------------------------------------------------
+Successes without locality. 
+-----------------------------------------------------------------
+DN: c=au. 
+Generic DN: c=country. 
+Components of the RDN:
+c: au. 
+-----------------------------------------------------------------
+DN: c=au;o=MagicWare. 
+Generic DN: c=country;o=organization. 
+Components of the RDN:
+c: au. 
+o: MagicWare. 
+-----------------------------------------------------------------
+DN: c=au;o=MagicWare;ou=Research. 
+Generic DN: c=country;o=organization;ou=organizationalUnit. 
+Components of the RDN:
+c: au. 
+ou: Research. 
+o: MagicWare. 
+-----------------------------------------------------------------
+DN: c=au;o=MagicWare;ou=Research;cn=Ron Savage. 
+Generic DN: c=country;o=organization;ou=organizationalUnit;cn=commonName. 
+Components of the RDN:
+cn: Ron Savage. 
+c: au. 
+ou: Research. 
+o: MagicWare. 
+-----------------------------------------------------------------
+DN: c=au;o=MagicWare;cn=Ron Savage. 
+Generic DN: c=country;o=organization;cn=commonName. 
+Components of the RDN:
+cn: Ron Savage. 
+c: au. 
+o: MagicWare. 
+-----------------------------------------------------------------
+Successes with locality. 
+-----------------------------------------------------------------
+DN: c=au;l=Melbourne. 
+Generic DN: c=country;l=locality. 
+Components of the RDN:
+c: au. 
+l: Melbourne. 
+-----------------------------------------------------------------
+DN: c=au;l=Melbourne;o=MagicWare. 
+Generic DN: c=country;l=locality;o=organization. 
+Components of the RDN:
+c: au. 
+l: Melbourne. 
+o: MagicWare. 
+-----------------------------------------------------------------
+DN: c=au;l=Melbourne;o=MagicWare;ou=Research. 
+Generic DN: c=country;l=locality;o=organization;ou=organizationalUnit. 
+Components of the RDN:
+c: au. 
+l: Melbourne. 
+ou: Research. 
+o: MagicWare. 
+-----------------------------------------------------------------
+Locality: absent. OrganizationalUnit: absent. 
+DN: c=au;o=MagicWare;cn=Ron Savage. 
+Generic DN: c=country[;l=locality];o=organization[;ou=organizationalUnit];cn=commonName. 
+Components of the RDN:
+cn: Ron Savage. 
+c: au. 
+o: MagicWare. 
+-----------------------------------------------------------------
+Locality: absent. OrganizationalUnit: present. 
+DN: c=au;o=MagicWare;ou=Research;cn=Ron Savage. 
+Generic DN: c=country[;l=locality];o=organization[;ou=organizationalUnit];cn=commonName. 
+Components of the RDN:
+cn: Ron Savage. 
+c: au. 
+ou: Research. 
+o: MagicWare. 
+-----------------------------------------------------------------
+Locality: present. OrganizationalUnit: absent. 
+DN: c=au;l=Melbourne;o=MagicWare;cn=Ron Savage. 
+Generic DN: c=country[;l=locality];o=organization[;ou=organizationalUnit];cn=commonName. 
+Components of the RDN:
+cn: Ron Savage. 
+c: au. 
+l: Melbourne. 
+o: MagicWare. 
+-----------------------------------------------------------------
+Locality: present. OrganizationalUnit: present. 
+DN: c=au;l=Melbourne;o=MagicWare;ou=Research;cn=Ron Savage. 
+Generic DN: c=country[;l=locality];o=organization[;ou=organizationalUnit];cn=commonName. 
+Components of the RDN:
+cn: Ron Savage. 
+c: au. 
+l: Melbourne. 
+ou: Research. 
+o: MagicWare. 
+-----------------------------------------------------------------

@@ -1,0 +1,101 @@
+#-----------------------------------------------------------------
+# Name:
+#	X500DN.stt. stt -> State Transition Table.
+#
+# Warning:
+#	Some data lines have an abbreviation on them - commandList -
+#	which is expanded in DFA::Command::load(). It expands
+#	to a list of all events which are acceptable in commandState,
+#	including the EOFEvent. This way, anyone editing this file
+#	need not patch the validEvents field on any of those lines
+#	when adding new commands.
+#
+# Note:
+#	The following line names the fields on succeeding data lines.
+#
+# state         regExp                        event                function            nextState       validEvents
+#
+# --------------
+# Initial stuff.
+# --------------
+
+initialState    ^header$                      headerEvent          headerFn            headerState     dateEvent|endHeaderEvent
+
+# -------------
+# Header stuff.
+# -------------
+
+headerState     ^date=(.+)$                   dateEvent            dateFn              headerState     dateEvent|endHeaderEvent
+headerState     ^endHeader$                   endHeaderEvent       endHeaderFn         commandState    commandList
+
+# --------------
+# Command stuff.
+# --------------
+
+commandState    ^addCountry$                  addCEvent            addCFn              addCState       addCDNEvent
+commandState    ^addOrganization$             addOEvent            addOFn              addOState       addODNEvent
+commandState    ^addOrganizationalUnit$       addOUEvent           addOUFn             addOUState      addOUDNEvent
+commandState    ^addCommonName$               addCNEvent           addCNFn             addCNState      addCNDNEvent
+commandState    ^deleteCountry$               deleteCEvent         deleteCFn           deleteCState    deleteCDNEvent
+commandState    ^deleteOrganization$          deleteOEvent         deleteOFn           deleteOState    deleteODNEvent
+commandState    ^deleteOrganizationalUnit$    deleteOUEvent        deleteOUFn          deleteOUState   deleteOUDNEvent
+commandState    ^deleteCommonName$            deleteCNEvent        deleteCNFn          deleteCNState   deleteCNDNEvent
+
+# ------------------
+# Add country stuff.
+# ------------------
+
+addCState       ^c=([A-Za-z]{2,2})$           addCDNEvent          addCDNFn            addCState       endAddCEvent
+addCState       ^endAddCountry$               endAddCEvent         endAddCFn           commandState    commandList
+
+# -----------------------
+# Add organization stuff.
+# -----------------------
+
+addOState       ^.+;o=([A-Za-z]+)$            addODNEvent          addODNFn            addOState       endAddOEvent
+addOState       ^endAddOrganization$          endAddOEvent         endAddOFn           commandState    commandList
+
+# ------------------------------
+# Add organizational unit stuff.
+# ------------------------------
+
+addOUState      ^.+;ou=([A-Za-z]+)$           addOUDNEvent         addOUDNFn           addOUState      endAddOUEvent
+addOUState      ^endAddOrganizationalUnit$    endAddOUEvent        endAddOUFn          commandState    commandList
+
+# ----------------------
+# Add common name stuff.
+# ----------------------
+
+addCNState     ^.+;cn=([\w\s]+)$              addCNDNEvent         addCNDNFn           addCNState      addCNAttrsEvent
+addCNState     ^attributes$                   addCNAttrsEvent      addCNAttributesFn   addCNState      addCNSurnameEvent
+addCNState     ^surname=([A-Za-z]+)$          addCNSurnameEvent    addCNSurnameFn      addCNState      addCNSurnameEvent|endAddCNEvent
+addCNState     ^endAddCommonName$             endAddCNEvent        endAddCNFn          commandState    commandList
+
+# ---------------------
+# Delete country stuff.
+# ---------------------
+
+deleteCState    ^c=([A-Za-z]{2,2})$           deleteCDNEvent       deleteCDNFn         deleteCState    endDeleteCEvent
+deleteCState    ^endDeleteCountry$            endDeleteCEvent      endDeleteCFn        commandState    commandList
+
+# --------------------------
+# Delete organization stuff.
+# --------------------------
+
+deleteOState    ^.+;o=([A-Za-z]+)$            deleteODNEvent       deleteODNFn         deleteOState    endDeleteOEvent
+deleteOState    ^endDeleteOrganization$       endDeleteOEvent      endDeleteOFn        commandState    commandList
+
+# ---------------------------------
+# Delete organizational unit stuff.
+# ---------------------------------
+
+deleteOUState   ^.+;ou=([A-Za-z]+)$           deleteOUDNEvent      deleteOUDNFn        deleteOUState   endDeleteOUEvent
+deleteOUState   ^endDeleteOrganizationalUnit$ endDeleteOUEvent     endDeleteOUFn       commandState    commandList
+
+# -------------------------
+# Delete common name stuff.
+# -------------------------
+
+deleteCNState   ^.+;cn=([\w\s]+)$             deleteCNDNEvent      deleteCNDNFn        deleteCNState   endDeleteCNEvent
+deleteCNState  ^endDeleteCommonName$          endDeleteCNEvent     endDeleteCNFn       commandState    commandList
+

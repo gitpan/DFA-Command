@@ -1,0 +1,309 @@
+headerFn: 1. 
+Original: header 
+Clean:    header 
+
+dateFn: 1. 
+Original: date=11-Apr-96 
+Clean:    date=11-Apr-96 
+Found: <11-Apr-96>. 
+
+endHeaderFn: 1. 
+Original: endHeader 
+Clean:    endHeader 
+
+addCFn: 1. 
+Original: addCountry 
+Clean:    addCountry 
+
+addCDNFn: 1. 
+Original: c=au 
+Clean:    c=au 
+Found: <au>. 
+
+endAddCFn: 1. 
+Original: endAddCountry 
+Clean:    endAddCountry 
+
+addCFn: 2. 
+Original: addCountry 
+Clean:    addCountry 
+
+addCDNFn: 2. 
+Original: c=us 
+Clean:    c=us 
+Found: <us>. 
+
+endAddCFn: 2. 
+Original: endAddCountry 
+Clean:    endAddCountry 
+
+addCFn: 3. 
+Original: addCountry 
+Clean:    addCountry 
+
+addCDNFn: 3. 
+Original: c=gb 
+Clean:    c=gb 
+Found: <gb>. 
+
+endAddCFn: 3. 
+Original: endAddCountry 
+Clean:    endAddCountry 
+
+addOFn: 1. 
+Original: addOrganization 
+Clean:    addOrganization 
+
+addODNFn: 1. 
+Original: c=au;o=Government 
+Clean:    c=au;o=Government 
+Found: <Government>. 
+
+endAddOFn: 1. 
+Original: endAddOrganization 
+Clean:    endAddOrganization 
+
+addOUFn: 1. 
+Original: addOrganizationalUnit 
+Clean:    addOrganizationalUnit 
+
+addOUDNFn: 1. 
+Original: c=au;o=Government;ou=Parliament 
+Clean:    c=au;o=Government;ou=Parliament 
+Found: <Parliament>. 
+
+endAddOUFn: 1. 
+Original: endAddOrganizationalUnit 
+Clean:    endAddOrganizationalUnit 
+
+addOUFn: 2. 
+Original: addOrganizationalUnit 
+Clean:    addOrganizationalUnit 
+
+addOUDNFn: 2. 
+Original: c=au;o=Government;ou=Treasury 
+Clean:    c=au;o=Government;ou=Treasury 
+Found: <Treasury>. 
+
+endAddOUFn: 2. 
+Original: endAddOrganizationalUnit 
+Clean:    endAddOrganizationalUnit 
+
+addCNFn: 1. 
+Original: addCommonName 
+Clean:    addCommonName 
+
+addCNDNFn: 1. 
+Original: c=au;o=Government;ou=Parliament;cn=Ron Savage 
+Clean:    c=au;o=Government;ou=Parliament;cn=Ron Savage 
+Found: <Ron Savage>. 
+
+addCNAttributesFn: 1. 
+Original: attributes 
+Clean:    attributes 
+
+addCNSurnameFn: 1. 
+Original: surname=Savage 
+Clean:    surname=Savage 
+Found: <Savage>. 
+
+endAddCNFn: 1. 
+Original: endAddCommonName 
+Clean:    endAddCommonName 
+
+addCNFn: 2. 
+Original: addCommonName 
+Clean:    addCommonName 
+
+addCNDNFn: 2. 
+Original: c=au;o=Government;ou=Parliament;cn=Pen Savage 
+Clean:    c=au;o=Government;ou=Parliament;cn=Pen Savage 
+Found: <Pen Savage>. 
+
+addCNAttributesFn: 2. 
+Original: attributes 
+Clean:    attributes 
+
+addCNSurnameFn: 2. 
+Original: surname=Savage 
+Clean:    surname=Savage 
+Found: <Savage>. 
+
+endAddCNFn: 2. 
+Original: endAddCommonName 
+Clean:    endAddCommonName 
+
+addCNFn: 3. 
+Original: addCommonName 
+Clean:    addCommonName 
+
+addCNDNFn: 3. 
+Original: c=au;o=Government;ou=Parliament;cn=Nicky Savage 
+Clean:    c=au;o=Government;ou=Parliament;cn=Nicky Savage 
+Found: <Nicky Savage>. 
+
+addCNAttributesFn: 3. 
+Original: attributes 
+Clean:    attributes 
+
+addCNSurnameFn: 3. 
+Original: surname=Savage 
+Clean:    surname=Savage 
+Found: <Savage>. 
+
+endAddCNFn: 3. 
+Original: endAddCommonName 
+Clean:    endAddCommonName 
+
+addCNFn: 4. 
+Original: addCommonName 
+Clean:    addCommonName 
+
+addCNDNFn: 4. 
+Original: c=au;o=Government;ou=Treasury;cn=Zoe Savage 
+Clean:    c=au;o=Government;ou=Treasury;cn=Zoe Savage 
+Found: <Zoe Savage>. 
+
+addCNAttributesFn: 4. 
+Original: attributes 
+Clean:    attributes 
+
+addCNSurnameFn: 4. 
+Original: surname=Savage 
+Clean:    surname=Savage 
+Found: <Savage>. 
+
+endAddCNFn: 4. 
+Original: endAddCommonName 
+Clean:    endAddCommonName 
+
+deleteCNFn: 1. 
+Original: deleteCommonName 
+Clean:    deleteCommonName 
+
+deleteCNDNFn: 1. 
+Original: c=au;o=Government;ou=Treasury;cn=Zoe Savage 
+Clean:    c=au;o=Government;ou=Treasury;cn=Zoe Savage 
+Found: <Zoe Savage>. 
+
+endDeleteCNFn: 1. 
+Original: endDeleteCommonName 
+Clean:    endDeleteCommonName 
+
+deleteCNFn: 2. 
+Original: deleteCommonName 
+Clean:    deleteCommonName 
+
+deleteCNDNFn: 2. 
+Original: c=au;o=Government;ou=Parliament;cn=Nicky Savage 
+Clean:    c=au;o=Government;ou=Parliament;cn=Nicky Savage 
+Found: <Nicky Savage>. 
+
+endDeleteCNFn: 2. 
+Original: endDeleteCommonName 
+Clean:    endDeleteCommonName 
+
+deleteCNFn: 3. 
+Original: deleteCommonName 
+Clean:    deleteCommonName 
+
+deleteCNDNFn: 3. 
+Original: c=au;o=Government;ou=Parliament;cn=Pen Savage 
+Clean:    c=au;o=Government;ou=Parliament;cn=Pen Savage 
+Found: <Pen Savage>. 
+
+endDeleteCNFn: 3. 
+Original: endDeleteCommonName 
+Clean:    endDeleteCommonName 
+
+deleteCNFn: 4. 
+Original: deleteCommonName 
+Clean:    deleteCommonName 
+
+deleteCNDNFn: 4. 
+Original: c=au;o=Government;ou=Parliament;cn=Ron Savage 
+Clean:    c=au;o=Government;ou=Parliament;cn=Ron Savage 
+Found: <Ron Savage>. 
+
+endDeleteCNFn: 4. 
+Original: endDeleteCommonName 
+Clean:    endDeleteCommonName 
+
+deleteOUFn: 1. 
+Original: deleteOrganizationalUnit 
+Clean:    deleteOrganizationalUnit 
+
+deleteOUDNFn: 1. 
+Original: c=au;o=Government;ou=Treasury 
+Clean:    c=au;o=Government;ou=Treasury 
+Found: <Treasury>. 
+
+endDeleteOUFn: 1. 
+Original: endDeleteOrganizationalUnit 
+Clean:    endDeleteOrganizationalUnit 
+
+deleteOUFn: 2. 
+Original: deleteOrganizationalUnit 
+Clean:    deleteOrganizationalUnit 
+
+deleteOUDNFn: 2. 
+Original: c=au;o=Government;ou=Parliament 
+Clean:    c=au;o=Government;ou=Parliament 
+Found: <Parliament>. 
+
+endDeleteOUFn: 2. 
+Original: endDeleteOrganizationalUnit 
+Clean:    endDeleteOrganizationalUnit 
+
+deleteOFn: 1. 
+Original: deleteOrganization 
+Clean:    deleteOrganization 
+
+deleteODNFn: 1. 
+Original: c=au;o=Government 
+Clean:    c=au;o=Government 
+Found: <Government>. 
+
+endDeleteOFn: 1. 
+Original: endDeleteOrganization 
+Clean:    endDeleteOrganization 
+
+deleteCFn: 1. 
+Original: deleteCountry 
+Clean:    deleteCountry 
+
+deleteCDNFn: 1. 
+Original: c=gb 
+Clean:    c=gb 
+Found: <gb>. 
+
+endDeleteCFn: 1. 
+Original: endDeleteCountry 
+Clean:    endDeleteCountry 
+
+deleteCFn: 2. 
+Original: deleteCountry 
+Clean:    deleteCountry 
+
+deleteCDNFn: 2. 
+Original: c=us 
+Clean:    c=us 
+Found: <us>. 
+
+endDeleteCFn: 2. 
+Original: endDeleteCountry 
+Clean:    endDeleteCountry 
+
+deleteCFn: 3. 
+Original: deleteCountry 
+Clean:    deleteCountry 
+
+deleteCDNFn: 3. 
+Original: c=au 
+Clean:    c=au 
+Found: <au>. 
+
+endDeleteCFn: 3. 
+Original: endDeleteCountry 
+Clean:    endDeleteCountry 
+

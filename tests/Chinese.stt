@@ -1,0 +1,32 @@
+#-----------------------------------------------------------------
+# Name:
+#	Chinese.stt. stt -> State Transition Table.
+#
+# Warning:
+#	Some data lines have an abbreviation on them - commandList -
+#	which is expanded in DFA::Command::load(). It expands
+#	to a list of all events which are acceptable in commandState,
+#	including the EOFEvent. This way, anyone editing this file
+#	need not patch the validEvents field on any of those lines
+#	when adding new commands.
+#
+# Note:
+#	The following line names the fields on succeeding data lines.
+#
+# state         regExp                        event                function            nextState       validEvents
+#
+# --------------
+# Initial stuff.
+# --------------
+
+initialState    ^(Start)$                     StartEvent           StartFn             commandState    commandList
+
+# --------------
+# Chinese stuff.
+# --------------
+
+commandState    ([zZ]hongguo)\W               ZhongguoEvent        ZhongguoFn          commandState    commandList
+commandState    (Zhongguohua)                 ZhongguohuaEvent     ZhongguohuaFn       commandState    commandList
+commandState    ([Rr]en)                      RenEvent             RenFn               commandState    commandList
+commandState    ^(Finish)$                    FinishEvent          FinishFn            commandState    EOFEvent
+

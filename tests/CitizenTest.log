@@ -1,0 +1,87 @@
+headerFn: 1. 
+Original: header 
+Clean:    header 
+
+dateFn: 1. 
+Original: date=21-Apr-97 
+Clean:    date=21-Apr-97 
+Found: <21-Apr-97>. 
+
+endHeaderFn: 1. 
+Original: end 
+Clean:    end 
+
+addCitizenFn: 1. 
+Original: addCitizen 
+Clean:    addCitizen 
+
+addGivenFn: 1. 
+Original: given=Ron 
+Clean:    given=Ron 
+Found: <Ron>. 
+
+addFamilyFn: 1. 
+Original: family=Savage 
+Clean:    family=Savage 
+Found: <Savage>. 
+
+addEmailFn: 1. 
+Original: email=rpsavage@ozemail.com.au 
+Clean:    email=rpsavage@ozemail.com.au 
+Found: <rpsavage@ozemail.com.au>. 
+
+addEmailFn: 2. 
+Original: email=Savage.Ron.RS@bhp.com.au 
+Clean:    email=Savage.Ron.RS@bhp.com.au 
+Found: <Savage.Ron.RS@bhp.com.au>. 
+
+endAddCitizenFn: 1. 
+Original: end 
+Clean:    end 
+
+addCitizenFn: 2. 
+Original: addCitizen 
+Clean:    addCitizen 
+
+addGivenFn: 2. 
+Original: given=Penelope 
+Clean:    given=Penelope 
+Found: <Penelope>. 
+
+addGivenFn: 3. 
+Original: given=Anne 
+Clean:    given=Anne 
+Found: <Anne>. 
+
+addFamilyFn: 2. 
+Original: family=Savage 
+Clean:    family=Savage 
+Found: <Savage>. 
+
+addEmailFn: 3. 
+Original: email=rpsavage@ozemail.com.au 
+Clean:    email=rpsavage@ozemail.com.au 
+Found: <rpsavage@ozemail.com.au>. 
+
+endAddCitizenFn: 2. 
+Original: end 
+Clean:    end 
+
+deleteCitizenFn: 1. 
+Original: deleteCitizen 
+Clean:    deleteCitizen 
+
+deleteGivenFn: 1. 
+Original: given=Ron 
+Clean:    given=Ron 
+Found: <Ron>. 
+
+deleteFamilyFn: 1. 
+Original: family=Savage 
+Clean:    family=Savage 
+Found: <Savage>. 
+
+endDeleteCitizenFn: 1. 
+Original: end 
+Clean:    end 
+

@@ -1,0 +1,54 @@
+#-----------------------------------------------------------------
+# Name:
+#	Citizen.stt. stt -> State Transition Table.
+#
+# Warning:
+#	Some data lines have an abbreviation on them - commandList -
+#	which is expanded in DFA::Command::load(). It expands
+#	to a list of all events which are acceptable in commandState,
+#	including the EOFEvent. This way, anyone editing this file
+#	need not patch the validEvents field on any of those lines
+#	when adding new commands.
+#
+# Note:
+#	The following line names the fields on succeeding data lines.
+#
+# state         regExp                        event                function            nextState       validEvents
+#
+# --------------
+# Initial stuff.
+# --------------
+
+initialState    ^header$                      headerEvent          headerFn            headerState     dateEvent|endHeaderEvent
+
+# -------------
+# Header stuff.
+# -------------
+
+headerState     ^date=(.+)$                   dateEvent            dateFn              headerState     dateEvent|endHeaderEvent
+headerState     ^end$                         endHeaderEvent       endHeaderFn         commandState    commandList
+
+# --------------
+# Command stuff.
+# --------------
+
+commandState    ^addCitizen$                  addCitizenEvent      addCitizenFn        addCitizenState addGivenEvent
+commandState    ^deleteCitizen$               deleteCitizenEvent   deleteCitizenFn     deleteCitizenState deleteGivenEvent
+
+# ------------------
+# Add citizen stuff.
+# ------------------
+
+addCitizenState ^given=(.+)$                  addGivenEvent        addGivenFn          addCitizenState addGivenEvent|addFamilyEvent|addEmailEvent
+addCitizenState ^family=(.+)$                 addFamilyEvent       addFamilyFn         addCitizenState addGivenEvent|addFamilyEvent|addEmailEvent
+addCitizenState ^email=(.+)$                  addEmailEvent        addEmailFn          addCitizenState addGivenEvent|addFamilyEvent|addEmailEvent|endAddCitizenEvent
+addCitizenState ^end$                         endAddCitizenEvent   endAddCitizenFn     commandState    commandList
+
+# ---------------------
+# Delete citizen stuff.
+# ---------------------
+
+deleteCitizenState ^given=(.+)$               deleteGivenEvent     deleteGivenFn       deleteCitizenState deleteGivenEvent|deleteFamilyEvent
+deleteCitizenState ^family=(.+)$              deleteFamilyEvent    deleteFamilyFn      deleteCitizenState deleteGivenEvent|deleteFamilyEvent|endDeleteCitizenEvent
+deleteCitizenState ^end$                      endDeleteCitizenEvent endDeleteCitizenFn commandState    commandList
+

@@ -1,0 +1,25 @@
+StartFn: 1. 
+Original: Start 
+Clean:    Start 
+Found: <Start>. 
+
+ZhongguohuaFn: 1. 
+Original: Zhongguohua 
+Clean:    Zhongguohua 
+Found: <Zhongguohua>. 
+
+ZhongguoFn: 1. 
+Original: Zhongguo ren 
+Clean:    Zhongguo ren 
+Found: <Zhongguo>. 
+
+RenFn: 1. 
+Original: Zhongguo ren 
+Clean:    Zhongguo ren 
+Found: <ren>. 
+
+FinishFn: 1. 
+Original: Finish 
+Clean:    Finish 
+Found: <Finish>. 
+
