@@ -36,7 +36,7 @@ require Exporter;
 # Do not simply export all your public functions/methods/constants.
 @EXPORT = qw();
 
-$VERSION = '1.00';
+$VERSION = '1.98';
 
 # Preloaded methods go here.
 #-------------------------------------------------------------------
@@ -181,7 +181,7 @@ sub outputHeading
 	my($self, $fileName, $firstEvent, $visualBreak) = @_;
 
 	print <<EndOfHereDoc;
-#!/usr/gnu/bin/perl -w
+#!/usr/bin/perl
 #
 # Name:
 #	Generated.pl.
@@ -211,6 +211,9 @@ sub outputHeading
 # Initialize.
 
 require 5.000;
+
+use warnings;
+#use strict;
 
 use Getopt::Std;
 use DFA::Command;

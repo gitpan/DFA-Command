@@ -1,4 +1,4 @@
-#!/usr/gnu/bin/perl -w
+#!/usr/bin/perl
 #
 # Name:
 #	X500DN_Gen.pl.

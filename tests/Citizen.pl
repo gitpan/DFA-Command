@@ -1,4 +1,4 @@
-#!/usr/gnu/bin/perl -w
+#!/usr/bin/perl
 #
 # Name:
 #	Citizen.pl.

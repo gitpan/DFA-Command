@@ -1,13 +1,13 @@
-#!/usr/bin/perl
+#!/usr/gnu/bin/perl -w
 #
 # Name:
-#	Citizen_Gen.pl.
+#	X500DN_Gen.pl.
 #
 # Purpose:
 #	Exercise the DFA::Generate module.
 #
 # Usage:
-#	...>perl Citizen_Gen.pl Citizen.stt headerEvent > Citizen.pl
+#	...>perl X500DN_Gen.pl X500DN.stt headerEvent > X500DN.pl
 #
 # Version:
 #	1.00	11-Apr-97

@@ -1,0 +1,14 @@
+--- #YAML:1.0
+name: DFA-Command
+version: 1.98
+author:
+  - Ron Savage <ron@savage.net.au>
+abstract: A Discrete Finite Automata command processor.
+license: artistic
+requires:
+  Carp: 0
+build_requires:
+  Test::More: 0
+  Test::Pod: 0
+provides: {}
+generated_by: Module::Build version 0.24

@@ -1,13 +1,13 @@
-#!/usr/bin/perl
+#!/usr/gnu/bin/perl -w
 #
 # Name:
-#	Citizen_Gen.pl.
+#	Chinese_Gen.pl.
 #
 # Purpose:
 #	Exercise the DFA::Generate module.
 #
 # Usage:
-#	...>perl Citizen_Gen.pl Citizen.stt headerEvent > Citizen.pl
+#	...>perl Chinese_Gen.pl Chinese.stt ChineseEvent > Chinese.pl
 #
 # Version:
 #	1.00	11-Apr-97

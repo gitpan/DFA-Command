@@ -1,13 +1,13 @@
-#!/usr/bin/perl
+#!/usr/gnu/bin/perl -w
 #
 # Name:
-#	Generated.pl.
+#	X500DN.pl.
 #
 # Purpose:
 #	Exercise the DFA::Command module.
 #
 # Usage:
-#	...>perl Generated.pl X500DN.stt headerEvent Real.dat
+#	...>perl X500DN.pl X500DN.stt headerEvent Real.dat
 #
 # Version:
 #	0.00	11-Apr-97

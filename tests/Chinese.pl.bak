@@ -1,13 +1,13 @@
-#!/usr/bin/perl
+#!/usr/gnu/bin/perl -w
 #
 # Name:
-#	Generated.pl.
+#	Chinese.pl.
 #
 # Purpose:
 #	Exercise the DFA::Command module.
 #
 # Usage:
-#	...>perl Generated.pl Chinese.stt StartEvent Real.dat
+#       ...>perl Chinese.pl Chinese.stt StartEvent Real.dat
 #
 # Version:
 #	0.00	11-Apr-97
@@ -47,6 +47,15 @@ if ($opt_d)
 
 	print '-' x 30, "\nEnd of state transition table. \n", '-' x 30, "\n\n";
 }
+
+%translate =
+(
+	'Start'			=> 'Start',
+	'Finish'		=> 'Finish',
+	'Zhongguo'		=> 'China',
+	'Zhongguohua'	=> 'Chinese',
+	'ren'			=> 'people',
+);
 
 # Process the one input file.
 
@@ -128,10 +137,13 @@ sub report
 {
 	my($stemName, $stemCount) = @_;
 
-	print "$stemName: $stemCount. \n";
-	print "Original: $stateMachine->{'original'} \n";
-	print "Clean:    $stateMachine->{'clean'} \n";
-	print "Found: <$stateMachine->{'$1'}>. \n"
+#	print "$stemName: $stemCount. \n";
+#	print "Original: $stateMachine->{'original'} \n";
+#	print "Clean:    $stateMachine->{'clean'} \n";
+#	print "Found: <$stateMachine->{'$1'}>. \n"
+#		if (defined($stateMachine -> {'$1'}) );
+	print "$stateMachine->{'$1'} -> ",
+			"$translate{$stateMachine->{'$1'}}\n"
 		if (defined($stateMachine -> {'$1'}) );
 	print "\n";
 

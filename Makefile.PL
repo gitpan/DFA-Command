@@ -9,22 +9,23 @@ WriteMakefile
 		'AUTHOR' => 'Ron Savage (ron@savage.net.au)',
 		'ABSTRACT' => 'Discrete Finite Automata/Finite State Machine',
     ) : (),
-'clean'				=>
+	clean			=>
 	{
-	'FILES'			=> 'blib/* Makefile MANIFEST DFA-Command-*'
+		FILES		=> 'blib/* Makefile MANIFEST DFA-Command-*'
 	},
-'dist'				=>
+	dist			=>
 	{
-	'COMPRESS'		=> 'gzip',
-	'SUFFIX'		=> 'gz'
+		COMPRESS	=> 'gzip',
+		SUFFIX		=> 'gz'
 	},
-'DISTNAME'			=> 'DFA-Command',
-'NAME'				=> 'DFA::Command',
-'PM'				=>
+	DISTNAME		=> 'DFA-Command',
+	NAME			=> 'DFA::Command',
+	PL_FILES		=> {},
+	PREREQ_PM		=>
 	{
-	'Command.pm' 	=> '$(INST_LIBDIR)/Command.pm',
-	'Generate.pm' 	=> '$(INST_LIBDIR)/Generate.pm',
+		Carp		=> 0,
+		Test::More	=> 0,
+		Test::Pod	=> 0,
 	},
-'PREREQ_PM'			=> {},
-'VERSION_FROM'		=> 'Command.pm'
+	VERSION_FROM	=> 'lib/DFA/Command.pm'
 );
