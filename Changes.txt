@@ -1,5 +1,13 @@
 Revision history for Perl extension DFA.
 
+1.95 26-May-99
+--------------
+o Ensure POD survives buggy pod2man
+
+1.94 19-Apr-99
+--------------
+o Patch Makefile.PL to support ActivePerl's ppm.
+
 1.93  1-Apr-99
 --------------
 o Change die to croak

@@ -1,9 +1,9 @@
+Changes.txt
 Command.pm
 Generate.pm
+Makefile.PL
 MANIFEST
 MANIFEST.SKIP
-Makefile.PL
-Changes.txt
 Readme.txt
 tests/Chinese.dat
 tests/Chinese.log

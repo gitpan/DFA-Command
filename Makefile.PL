@@ -4,6 +4,11 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile
 (
+	($] ge '5.005') ?
+	(
+		'AUTHOR' => 'Ron Savage (rpsavage@ozemail.com.au)',
+		'ABSTRACT' => 'Discrete Finite Automata/Finite State Machine',
+    ) : (),
 'clean'				=>
 	{
 	'FILES'			=> 'blib/* Makefile MANIFEST DFA-Command-*'

@@ -20,7 +20,7 @@ require Exporter;
 
 @EXPORT_OK	= qw(dump validate);
 
-$VERSION	= '1.93';
+$VERSION	= '1.95';
 
 # Preloaded methods go here.
 #-------------------------------------------------------------------
@@ -421,8 +421,8 @@ sub new
 {
 	my($class, $firstEvent)	= @_;
 
-	my($self) = {};
-
+	$class							= ref($class) || $class;
+	my($self)						= {};
 	$self -> {'chomp'}				= 1;
 	$self -> {'command'}			= 'initialCommand';
 	$self -> {'commentPrefix'}		= '#';
@@ -607,9 +607,9 @@ __END__
 
 =head1 NAME
 
-DFA::Command - A Discrete Finite Automata command processor.
+C<DFA::Command> - A Discrete Finite Automata command processor.
 
-DFA::Generate - A DFA program generator.
+C<DFA::Generate> - A DFA program generator.
 
 =head1 SYNOPSIS
 
@@ -626,19 +626,21 @@ DFA::Generate - A DFA program generator.
 
 =head1 DESCRIPTION
 
-DFA::Command.
+C<DFA::Command>
 
 This module reads a state transition table and then reads a data file
 looking for patterns as defined by regular expressions in the state
 transition table. When a transition is detected, a sub is called.
 
-DFA::Generate.
+C<DFA::Generate>
 
 This module reads a state transition table and generates a Perl
-script which uses the module DFA::Command to process data according
+script which uses the module C<DFA::Command> to process data according
 to the said table.
 
-The name DFA::Command was chosen because:
+These 2 modules are installed together.
+
+The name C<DFA::Command> was chosen because:
 
 =over 4
 
@@ -660,6 +662,32 @@ It was developed in an environment where the input file contained commands
 and non-commands
 
 =back
+
+=head1 INSTALLATION
+
+You install C<DFA::Command>, as you would install any perl module library,
+by running these commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+If you want to install a private copy of C<DFA::Command> in your home
+directory, then you should try to produce the initial Makefile with
+something like this command:
+
+	perl Makefile.PL LIB=~/perl
+		or
+	perl Makefile.PL LIB=C:/Perl/Site/Lib
+
+If, like me, you don't have permission to write man pages into unix system
+directories, use:
+
+	make pure_install
+
+instead of make install. This option is secreted in the middle of p 414 of the
+second edition of the dromedary book.
 
 =head1 FEATURES
 
