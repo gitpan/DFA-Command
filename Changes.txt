@@ -1,5 +1,9 @@
 Revision history for Perl extension DFA.
 
+1.93  1-Apr-99
+--------------
+o Change die to croak
+
 1.92  Mon Mar 29 10:15:59 1999
 	- original version; created by h2xs 1.18
 

@@ -6,6 +6,8 @@ no strict 'refs';
 
 use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
 
+use Carp;
+
 require Exporter;
 
 @ISA = qw(Exporter);
@@ -50,7 +52,7 @@ sub generate
 # Read the state transition table.
 
 	my(@line);
-	open(INX, $fileName) || die "Can't open $fileName: $!. \n";
+	open(INX, $fileName) || croak("Can't open $fileName: $!");
 	@line = <INX>;
 	close(INX);
 	chomp(@line);

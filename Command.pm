@@ -6,6 +6,8 @@ no strict 'refs';
 
 use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
 
+use Carp;
+
 require Exporter;
 
 @ISA = qw(Exporter);
@@ -18,7 +20,7 @@ require Exporter;
 
 @EXPORT_OK	= qw(dump validate);
 
-$VERSION	= '1.92';
+$VERSION	= '1.93';
 
 # Preloaded methods go here.
 #-------------------------------------------------------------------
@@ -225,7 +227,7 @@ sub handleEvent
 		$routine	= $self -> {$state}{$event}{'sub'};
 		$self -> popEvent($fileName, $inputLine, $lineCount);
 		$status = eval("&$routine()");
-		die $@ if $@;
+		croak($@) if $@;
 		push(@{$self -> {'nextEvent'} }, $self -> {$state}{$event}{'validEvents'});
 	}
 	else
@@ -333,7 +335,7 @@ sub load
 	@RE		= ();
 	@event	= ();
 
-	open(INX, $fileName) || die "Unable to open $fileName: \n";
+	open(INX, $fileName) || croak("Can't open $fileName: $!");
 
 	while (defined($line = <INX>) )
 	{
@@ -492,7 +494,7 @@ sub process
 
 	my($originalLine, $cleanLine);
 
-	open(INX, $fileName) || die "Unable to open $fileName: \n";
+	open(INX, $fileName) || croak("Can't open $fileName: $!");
 
 	while (defined($originalLine = <INX>) )
 	{
@@ -537,7 +539,7 @@ sub validate
 
 	my(%sub) = ();
 
-	open(INX, $fileName) || die "Can't open $fileName: $! \n";
+	open(INX, $fileName) || croak("Can't open $fileName: $!");
 
 	while (<INX>)
 	{
