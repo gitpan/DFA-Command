@@ -2,9 +2,10 @@ Changes.txt
 Command.pm
 Generate.pm
 Makefile.PL
+Command.html
 MANIFEST
-MANIFEST.SKIP
-Readme.txt
+README
+t/base.t
 tests/Chinese.dat
 tests/Chinese.log
 tests/Chinese.pl
@@ -20,6 +21,8 @@ tests/Citizen.stt
 tests/CitizenTest.log
 tests/CitizenTest.pl
 tests/Citizen_Gen.pl
+tests/runTests.bat
+tests/runTests.tcsh
 tests/Validate.pl
 tests/X500DN.dat
 tests/X500DN.log
@@ -28,6 +31,3 @@ tests/X500DN.stt
 tests/X500DNTest.log
 tests/X500DNTest.pl
 tests/X500DN_Gen.pl
-tests/runTests.bat
-tests/runTests.tcsh
-t/base.t
