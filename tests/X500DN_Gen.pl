@@ -10,12 +10,15 @@
 #	...>perl X500DN_Gen.pl X500DN.stt headerEvent > X500DN.pl
 #
 # Version:
-#	1.00	11-Apr-97	Ron Savage	rpsavage@ozemail.com.au
+#	1.00	11-Apr-97
+#
+# Author:
+#	Ron Savage <ron@savage.net.au>
+#	http://savage.net.au/index.html
 #-------------------------------------------------------------------
 
 # Initialize.
 
-use integer;
 use strict;
 
 use DFA::Generate;

@@ -5,15 +5,15 @@ end
 addCitizen
 given=Ron
 family=Savage
-email=rpsavage@ozemail.com.au
+email=ron@savage.net.au
 email=Savage.Ron.RS@bhp.com.au
 end
 
 addCitizen
 given=Penelope
 given=Anne
-family=Savage
-email=rpsavage@ozemail.com.au
+family=Goward
+email=ron@savage.net.au
 end
 
 deleteCitizen

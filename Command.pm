@@ -1,6 +1,26 @@
 package DFA::Command;
 
-use integer;
+# Name:
+#	DFA::Command.
+#
+# Documentation:
+#	POD-style documentation is at the end. Extract it with pod2html.*.
+#
+# Tabs:
+#	4 spaces || die.
+#
+# Author:
+#	Ron Savage <ron@savage.net.au>
+#	Home page: http://savage.net.au/index.html
+#
+# Licence:
+#	Australian copyright (c) 1999-2002 Ron Savage.
+#
+#	All Programs of mine are 'OSI Certified Open Source Software';
+#	you can redistribute them and/or modify them under the terms of
+#	The Artistic License, a copy of which is available at:
+#	http://www.opensource.org/licenses/index.html
+
 use strict;
 no strict 'refs';
 
@@ -20,7 +40,7 @@ require Exporter;
 
 @EXPORT_OK	= qw(dump validate);
 
-$VERSION	= '1.95';
+$VERSION	= '1.96';
 
 # Preloaded methods go here.
 #-------------------------------------------------------------------
@@ -514,7 +534,7 @@ sub process
 		}
 
 	}	# End of while.
-	
+
 	$self -> {'event'} = 'EOFEvent';
 	$self -> popEvent($fileName, '', $.);
 
@@ -883,11 +903,6 @@ scanner correctly associates the $self token with the {'thing'} token.
 
 I regard this as a bug.
 
-=head1 AUTHOR
-
-C<DFA::Command> and C<DFA::Generate> were written by Ron Savage
-I<E<lt>rpsavage@ozemail.com.auE<gt>> in 1997.
-
 =head1 ACKNOWLEDGEMENTS
 
 The processing loop at the heart of this module is something I downloaded from
@@ -897,7 +912,16 @@ You'll know who you are: There were 2 bugs - both harmless - in 1 line of code,
 in the routine I call load(). Anybody who accepts responsibility for this code
 will be deemed to be the author. Well done!
 
+=head1 AUTHOR
+
+C<DFA::Command> and C<DFA::Generate> were written by Ron Savage
+I<E<lt>ron@savage.net.auE<gt>> in 1997.
+
 =head1 LICENCE
 
-This program is free software; you can redistribute it and/or modify it under
-the same terms as Perl itself.
+Australian copyright (c) 1997-2002 Ron Savage.
+
+	All Programs of mine are 'OSI Certified Open Source Software';
+	you can redistribute them and/or modify them under the terms of
+	The Artistic License, a copy of which is available at:
+	http://www.opensource.org/licenses/index.html

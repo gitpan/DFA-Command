@@ -1,5 +1,9 @@
 Revision history for Perl extension DFA.
 
+1.96  Sun May 12 13:12:11 2002
+	- Clean up licence and email stuff in all modules, scripts and other docs.
+		Upgrading is not necessary
+
 1.95 26-May-99
 --------------
 o Ensure POD survives buggy pod2man

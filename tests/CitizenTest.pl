@@ -10,14 +10,17 @@
 #	...>perl Generated.pl Citizen.stt headerEvent Real.dat
 #
 # Version:
-#	0.00	11-Apr-97	Ron Savage	rpsavage@ozemail.com.au
+#	0.00	11-Apr-97
+#
+# Author:
+#	Ron Savage <ron@savage.net.au>
+#	http://savage.net.au/index.html
 #-------------------------------------------------------------------
 
 # Initialize.
 
 require 5.000;
 
-use integer;
 use Getopt::Std;
 use DFA::Command;
 

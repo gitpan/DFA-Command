@@ -1,6 +1,26 @@
 package DFA::Generate;
 
-use integer;
+# Name:
+#	DFA::Generate.
+#
+# Documentation:
+#	POD-style documentation is at the end. Extract it with pod2html.*.
+#
+# Tabs:
+#	4 spaces || die.
+#
+# Author:
+#	Ron Savage <ron@savage.net.au>
+#	Home page: http://savage.net.au/index.html
+#
+# Licence:
+#	Australian copyright (c) 1999-2002 Ron Savage.
+#
+#	All Programs of mine are 'OSI Certified Open Source Software';
+#	you can redistribute them and/or modify them under the terms of
+#	The Artistic License, a copy of which is available at:
+#	http://www.opensource.org/licenses/index.html
+
 use strict;
 no strict 'refs';
 
@@ -30,7 +50,11 @@ $VERSION = '1.00';
 #		functions generated from tokens in the table
 #
 # Version:
-#	1.00	11-Apr-97	Ron Savage	rpsavage@ozemail.com.au
+#	1.00	11-Apr-97
+#
+# Author:
+#	Ron Savage <ron@savage.net.au>
+#	http://savage.net.au/index.html
 #
 # Usage:
 #	Step 1:
@@ -169,14 +193,25 @@ sub outputHeading
 #	...>perl Generated.pl $fileName $firstEvent Real.dat
 #
 # Version:
-#	0.00	11-Apr-97	Ron Savage	rpsavage\@ozemail.com.au
+#	1.00	11-Apr-97
+#
+# Author:
+#	Ron Savage <ron@savage.net.au>
+#	http://savage.net.au/index.html
+#
+# Licence:
+#	Australian Copyright (c) 1999-2002 Ron Savage.
+#
+#	All Programs of mine are 'OSI Certified Open Source Software';
+#	you can redistribute them and/or modify them under the terms of
+#	The Artistic License, a copy of which is available at:
+#	http://www.opensource.org/licenses/index.html
 #-------------------------------------------------------------------
 
 # Initialize.
 
 require 5.000;
 
-use integer;
 use Getopt::Std;
 use DFA::Command;
 
@@ -256,3 +291,27 @@ EndOfHereDoc
 1;
 
 __END__
+
+=head1 NAME
+
+C<DFA::Command> - A Discrete Finite Automata command processor.
+
+C<DFA::Generate> - A DFA program generator.
+
+=head1 SYNOPSIS
+
+See DFA::Command.
+
+=head1 AUTHOR
+
+C<DFA::Command> and C<DFA::Generate> were written by Ron Savage
+I<E<lt>ron@savage.net.auE<gt>> in 1997.
+
+=head1 LICENCE
+
+Australian copyright (c) 1997-2002 Ron Savage.
+
+	All Programs of mine are 'OSI Certified Open Source Software';
+	you can redistribute them and/or modify them under the terms of
+	The Artistic License, a copy of which is available at:
+	http://www.opensource.org/licenses/index.html

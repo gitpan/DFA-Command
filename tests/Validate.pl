@@ -10,13 +10,15 @@
 #	...>perl Validate.pl File.stt FirstEvent Script.pl
 #
 # Version:
-#	1.0.1	24-Sep-96	Ron Savage
+#	1.0.1	24-Sep-96
 #
+# Author:
+#	Ron Savage <ron@savage.net.au>
+#	http://savage.net.au/index.html
 #-------------------------------------------------------------------
 
 # Initialize.
 
-use integer;
 
 use DFA::Command;
 use Getopt::Simple;
