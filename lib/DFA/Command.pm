@@ -40,7 +40,7 @@ require Exporter;
 
 @EXPORT_OK	= qw(dump validate);
 
-$VERSION	= '1.98';
+$VERSION	= '1.99';
 
 # Preloaded methods go here.
 #-------------------------------------------------------------------
