@@ -24,7 +24,7 @@ package DFA::Command;
 use strict;
 no strict 'refs';
 
-use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
+use vars qw(@ISA @EXPORT @EXPORT_OK);
 
 use Carp;
 
@@ -40,7 +40,7 @@ require Exporter;
 
 @EXPORT_OK	= qw(dump validate);
 
-$VERSION	= '1.99';
+our $VERSION = '2.01';
 
 # Preloaded methods go here.
 #-------------------------------------------------------------------

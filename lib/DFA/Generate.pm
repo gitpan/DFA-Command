@@ -24,7 +24,7 @@ package DFA::Generate;
 use strict;
 no strict 'refs';
 
-use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
+use vars qw(@ISA @EXPORT @EXPORT_OK);
 
 use Carp;
 
@@ -36,7 +36,7 @@ require Exporter;
 # Do not simply export all your public functions/methods/constants.
 @EXPORT = qw();
 
-$VERSION = '1.99';
+our $VERSION = '2.01';
 
 # Preloaded methods go here.
 #-------------------------------------------------------------------
